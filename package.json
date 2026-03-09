@@ -13,8 +13,12 @@
   "type": "commonjs",
   "dependencies": {
     "ejs": "^5.0.1",
-    "express": "^5.2.1",
+    "express": "^4.22.1",
+    "peer": "^1.0.2",
     "socket.io": "^4.8.3",
     "uuid": "^13.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
   }
 }

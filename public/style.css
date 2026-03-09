@@ -1,12 +1,22 @@
 #video-grid {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    background: #1a1a1a;
+    min-height: 100vh;
 }
 
 video {
-    height: 300px;
-    width: 400px;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    background: #2a2a2a;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    aspect-ratio: 16/9;
     object-fit: cover;
-    padding: ;
+}
+
+video[data-peer="self"] {
+    border: 2px solid #4CAF50;
 }

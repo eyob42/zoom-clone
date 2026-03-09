@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Zoom Clone</title>
     <script>
-        const ROOM_ID ="<%= roomId %>";
+        const ROOM_ID = "<%= roomId %>";
     </script>
-    <script src="/socket.io/socket.io.js" defer></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://unpkg.com/peerjs@1.4.7/dist/peerjs.min.js"></script>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
 </head>
 <body>
     <div id="video-grid"></div>
+    <!-- Load script at the end to ensure DOM is ready -->
+    <script src="script.js"></script>
 </body>
 </html>
