@@ -12,7 +12,12 @@ navigator.mediaDevices.getUserMedia({
     addVideoStream(myVideo, stream);
 });
 
-socket.emit('join-room');
+socket.emit('join-room', ROOM_ID);
+
+socket.on('user-connected', ()=>{
+    console.log('New user connected to room');
+    connectToNewUser();
+})
 
 function addVideoStream(video, stream){
     video.srcObject = stream;
@@ -20,4 +25,8 @@ function addVideoStream(video, stream){
         video.play();
     });
     videoGrid.append(video);
+}
+
+function connectToNewUser() {
+    console.log('Abebe front connected');
 }

@@ -19,8 +19,14 @@ app.get('/:room', (req, res) => {
 })
 
 io.on('connection', (socket) => {
-    socket.on('join-room', ()=> {
-        console.log('someone joined');
+    socket.on('join-room', (roomId)=> {
+        socket.join(roomId);
+        socket.broadcast.to(roomId).emit('user-connected', socket.id);
+
+        socket.on('disconnect', () => {
+            console.log(`Socket ${socket.id} disconnected from room ${roomId}`);
+            socket.broadcast.to(roomId).emit('user-disconnected', socket.id);
+        });
     });
 });
 
