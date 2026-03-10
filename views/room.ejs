@@ -7,7 +7,15 @@
     <script>
         const ROOM_ID = "<%= roomId %>";
     </script>
-    
+    <script>
+    // Make PeerJS work with HTTPS
+    const peerConfig = {
+        path: '/peerjs',
+        host: window.location.hostname,
+        port: window.location.protocol === 'https:' ? 443 : 3000,
+        secure: window.location.protocol === 'https:'
+    };
+    </script>
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->

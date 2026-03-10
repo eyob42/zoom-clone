@@ -9,11 +9,7 @@ $(document).ready(function() {
     let myPeerId;
     let userName = `User_${Math.random().toString(36).substr(2, 4)}`;
 
-    const myPeer = new Peer(undefined, {
-        path: '/peerjs',
-        host: '/',
-        port: '443'
-    });
+    const myPeer = new Peer(undefined, peerConfig);
 
     // Get user media
     navigator.mediaDevices.getUserMedia({ video: true, audio: true })
