@@ -14,7 +14,6 @@ A real-time video conferencing application built with WebRTC, Socket.io, and Pee
 - **Real-time Video & Audio** - High-quality peer-to-peer video calls using WebRTC
 - **Multi-participant Support** - Join meetings with multiple users
 - **Group Chat** - Real-time messaging with typing indicators
-- **Screen Sharing** - Share your screen with participants
 - **Meeting Controls** - Mute/unmute, start/stop video, leave meeting
 - **Participant List** - See who's in the meeting
 - **Responsive Design** - Works on desktop and mobile devices
